@@ -9,17 +9,17 @@ export default function Projects() {
   return (
     <SectionWrapper
       id="projects"
-      className="relative w-full bg-[oklch(0.11_0.015_25)] px-6 py-32 overflow-hidden font-primary"
+      className="relative w-full bg-[oklch(0.11_0.015_145)] px-6 py-32 overflow-hidden font-primary"
     >
       {/* Background Glows */}
-      <div className="absolute top-20 left-10 h-[450px] w-[450px] rounded-full bg-[oklch(0.503_0.172_25/0.2)] blur-[180px]" />
-      <div className="absolute bottom-20 right-10 h-[450px] w-[450px] rounded-full bg-[oklch(0.65_0.22_350/0.18)] blur-[180px]" />
-      <div className="absolute top-1/2 left-1/2 h-[350px] w-[350px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[oklch(0.75_0.18_55/0.1)] blur-[160px]" />
+      <div className="absolute top-20 left-10 h-[450px] w-[450px] rounded-full bg-[oklch(0.571_0.181_145/0.2)] blur-[180px]" />
+      <div className="absolute bottom-20 right-10 h-[450px] w-[450px] rounded-full bg-[oklch(0.72_0.17_190/0.18)] blur-[180px]" />
+      <div className="absolute top-1/2 left-1/2 h-[350px] w-[350px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[oklch(0.76_0.19_125/0.1)] blur-[160px]" />
 
       <div className="relative z-10 mx-auto max-w-6xl">
         {/* Header */}
         <div className="text-center">
-          <p className="text-xs uppercase tracking-[0.35em] text-[oklch(0.503_0.172_25)] font-bold">
+          <p className="text-xs uppercase tracking-[0.35em] text-[oklch(0.571_0.181_145)] font-bold">
             Portfolio
           </p>
 
@@ -27,7 +27,7 @@ export default function Projects() {
             {"Projects I've Built"}
           </h2>
 
-          <p className="mt-5 text-[oklch(0.82_0.015_25)] max-w-2xl mx-auto">
+          <p className="mt-5 text-[oklch(0.82_0.015_145)] max-w-2xl mx-auto">
             Real-world projects showcasing my skills in software quality assurance,
             full-stack web, and mobile application development.
           </p>
@@ -50,11 +50,11 @@ export default function Projects() {
               {/* IMAGE */}
               <div className="relative">
                 {/* Glow */}
-                <div className="absolute -inset-4 rounded-3xl bg-gradient-to-r from-[oklch(0.75_0.18_55)] via-[oklch(0.503_0.172_25)] to-[oklch(0.65_0.22_350)] opacity-20 blur-2xl group-hover:opacity-45 transition duration-700" />
+                <div className="absolute -inset-4 rounded-3xl bg-gradient-to-r from-[oklch(0.76_0.19_125)] via-[oklch(0.571_0.181_145)] to-[oklch(0.72_0.17_190)] opacity-20 blur-2xl group-hover:opacity-45 transition duration-700" />
 
                 {/* Gradient Border */}
-                <div className="relative p-[2px] rounded-3xl bg-gradient-to-r from-[oklch(0.75_0.18_55)] via-[oklch(0.503_0.172_25)] to-[oklch(0.65_0.22_350)]">
-                  <div className="overflow-hidden rounded-3xl bg-[oklch(0.14_0.02_25)]">
+                <div className="relative p-[2px] rounded-3xl bg-gradient-to-r from-[oklch(0.76_0.19_125)] via-[oklch(0.571_0.181_145)] to-[oklch(0.72_0.17_190)]">
+                  <div className="overflow-hidden rounded-3xl bg-[oklch(0.14_0.02_145)]">
                     <motion.img
                       src={project.image}
                       alt={project.title}
@@ -87,8 +87,8 @@ export default function Projects() {
                     }}
                     className="flex items-center gap-2"
                   >
-                    <Folder className="h-6 w-6 text-[oklch(0.503_0.172_25)]" />
-                    <span className="text-xs uppercase tracking-widest text-[oklch(0.62_0.02_25)] font-semibold">
+                    <Folder className="h-6 w-6 text-[oklch(0.571_0.181_145)]" />
+                    <span className="text-xs uppercase tracking-widest text-[oklch(0.62_0.02_145)] font-semibold">
                       Featured Project
                     </span>
                   </motion.div>
@@ -103,7 +103,7 @@ export default function Projects() {
                           scale: 1.25,
                           rotate: 8,
                         }}
-                        className="text-[oklch(0.70_0.02_25)] hover:text-white transition"
+                        className="text-[oklch(0.70_0.02_145)] hover:text-white transition"
                       >
                         <Github className="h-5 w-5" />
                       </motion.a>
@@ -118,7 +118,7 @@ export default function Projects() {
                           scale: 1.25,
                           rotate: 8,
                         }}
-                        className="text-[oklch(0.70_0.02_25)] hover:text-white transition"
+                        className="text-[oklch(0.70_0.02_145)] hover:text-white transition"
                       >
                         <ExternalLink className="h-5 w-5" />
                       </motion.a>
@@ -137,7 +137,7 @@ export default function Projects() {
                 </motion.h3>
 
                 {/* Description */}
-                <p className="mt-5 text-[oklch(0.82_0.015_25)] leading-relaxed text-lg">
+                <p className="mt-5 text-[oklch(0.82_0.015_145)] leading-relaxed text-lg">
                   {project.description}
                 </p>
 
@@ -156,14 +156,14 @@ export default function Projects() {
                       className="
                         px-4 py-2
                         rounded-full
-                        border border-[oklch(0.503_0.172_25/0.25)]
-                        bg-[oklch(0.16_0.02_25/0.8)]
+                        border border-[oklch(0.571_0.181_145/0.25)]
+                        bg-[oklch(0.16_0.02_145/0.8)]
                         backdrop-blur-md
                         text-sm
-                        text-[oklch(0.88_0.01_25)]
-                        hover:border-[oklch(0.503_0.172_25)]
+                        text-[oklch(0.88_0.01_145)]
+                        hover:border-[oklch(0.571_0.181_145)]
                         hover:text-white
-                        hover:bg-[oklch(0.503_0.172_25/0.15)]
+                        hover:bg-[oklch(0.571_0.181_145/0.15)]
                         transition-all
                       "
                     >
