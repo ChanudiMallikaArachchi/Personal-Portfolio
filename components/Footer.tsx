@@ -1,6 +1,6 @@
 "use client";
 
-import { Github, Linkedin, Heart } from "lucide-react";
+import { Github, Linkedin } from "lucide-react";
 import { personalInfo, socials } from "@/data/portfolioData";
 
 export default function Footer() {
