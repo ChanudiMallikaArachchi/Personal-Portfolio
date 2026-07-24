@@ -1,22 +1,23 @@
 # 🚀 Chanudi MallikaArachchi — Full-Stack & QA Developer Portfolio
 
-A modern, high-performance personal portfolio built with **Next.js 14**, **Tailwind CSS**, and a state-of-the-art **OKLCH Color Engine**. Designed for optimal responsiveness, visual elegance, and seamless user interaction.
+A modern, high-performance personal portfolio built with **Next.js 14**, **Tailwind CSS**, and a state-of-the-art **OKLCH Emerald Color Engine**. Designed for optimal responsiveness, visual elegance, and seamless user interaction.
 
 ---
 
-## 🎨 Design System & OKLCH Color Engine
+## 🎨 Design System & OKLCH Emerald Color Engine
 
 This project utilizes modern **OKLCH CSS Variables** for rich, perceptually uniform color gradients and dark-mode glassmorphism:
 
-- **Core Accent Color**: `oklch(0.503 0.172 25)` (Vivid Flame Coral / Crimson)
+- **Core Accent Color**: `oklch(0.571 0.181 145)` (Vivid Emerald Green / Electric Jade)
 - **Harmonious Accents**:
-  - `oklch(0.75 0.18 55)` — Warm Amber Gold
-  - `oklch(0.65 0.22 350)` — Deep Crimson Rose
-  - `oklch(0.60 0.22 35)` — Flame Orange
+  - `oklch(0.76 0.19 125)` — Electric Lime
+  - `oklch(0.68 0.19 160)` — Bright Seafoam Mint
+  - `oklch(0.72 0.17 190)` — Luminous Aqua Cyan
+  - `oklch(0.52 0.15 175)` — Deep Cyber Teal
 - **Dark Mode Surface Palette**:
-  - Background: `oklch(0.11 0.015 25)`
-  - Surface Panel: `oklch(0.15 0.02 25)`
-  - Card Glass: `oklch(0.19 0.025 25)`
+  - Background: `oklch(0.11 0.015 145)`
+  - Surface Panel: `oklch(0.15 0.02 145)`
+  - Card Glass: `oklch(0.19 0.025 145)`
 
 ---
 
@@ -32,7 +33,7 @@ The site leverages Google Fonts with tailored optical sizing and font variation 
 ## ✨ Features
 
 - ⚡ **Next.js 14 App Router**: Server-side optimized page loading & static rendering.
-- 🎨 **OKLCH Palette System**: Perceptually uniform, vibrant color space with CSS variables.
+- 🎨 **Emerald OKLCH Palette**: Perceptually uniform, vibrant color space with CSS variables.
 - 💎 **Glassmorphism UI**: Dynamic blurred cards with ambient glowing borders.
 - 📱 **Fully Responsive**: Flawless experience across mobile, tablet, and desktop devices.
 - 🎭 **Smooth Animations**: Powered by Framer Motion & CSS Keyframes.
@@ -85,8 +86,8 @@ The site leverages Google Fonts with tailored optical sizing and font variation 
 ```
 personal-portfolio/
 ├── app/
-│   ├── globals.css      # OKLCH CSS variables & font utilities
-│   ├── layout.tsx       # Root layout with Google Fonts preconnect
+│   ├── globals.css      # OKLCH Emerald CSS variables & font utilities
+│   ├── layout.tsx       # Root layout with font configuration
 │   └── page.tsx         # Main portfolio page entry point
 ├── components/
 │   ├── Navbar.tsx       # Glassmorphism Navigation bar
