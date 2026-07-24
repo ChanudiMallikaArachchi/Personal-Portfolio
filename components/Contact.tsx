@@ -34,11 +34,11 @@ export default function Contact() {
   return (
     <SectionWrapper
       id="contact"
-      className="relative w-full px-6 py-28 bg-black overflow-hidden"
+      className="relative w-full px-6 py-28 bg-[oklch(0.11_0.015_25)] overflow-hidden font-primary"
     >
-      {/* 🔥 Background Glow */}
-      <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-blue-500/20 blur-[160px] rounded-full" />
-      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-purple-500/20 blur-[160px] rounded-full" />
+      {/* OKLCH Ambient Background Glow */}
+      <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[oklch(0.503_0.172_25/0.2)] blur-[160px] rounded-full pointer-events-none" />
+      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-[oklch(0.65_0.22_350/0.15)] blur-[160px] rounded-full pointer-events-none" />
 
       <div className="relative z-10 mx-auto max-w-5xl">
         {/* Heading */}
@@ -49,16 +49,16 @@ export default function Contact() {
           viewport={{ once: true }}
           className="text-center"
         >
-          <p className="text-xs uppercase tracking-widest text-blue-400">
+          <p className="text-xs uppercase tracking-widest text-[oklch(0.503_0.172_25)] font-bold">
             Let’s Connect
           </p>
 
-          <h2 className="mt-3 text-4xl md:text-5xl font-extrabold text-white">
+          <h2 className="font-secondary mt-3 text-4xl md:text-5xl font-extrabold text-white">
             Get In Touch
           </h2>
 
-          <p className="mt-4 text-zinc-400 max-w-2xl mx-auto">
-            Have a project idea or opportunity? Let’s build something amazing
+          <p className="mt-4 text-[oklch(0.82_0.015_25)] max-w-2xl mx-auto">
+            Have a QA or development project idea or opportunity? Let’s build something amazing
             together.
           </p>
         </motion.div>
@@ -73,13 +73,13 @@ export default function Contact() {
             viewport={{ once: true }}
             className="space-y-6"
           >
-            <div className="p-6 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl">
-              <div className="flex items-center gap-3 text-blue-400">
+            <div className="p-6 rounded-2xl border border-[oklch(0.503_0.172_25/0.25)] bg-[oklch(0.16_0.02_25/0.7)] backdrop-blur-xl">
+              <div className="flex items-center gap-3 text-[oklch(0.503_0.172_25)] font-medium">
                 <Mail />
                 <span className="text-sm">Email Me</span>
               </div>
 
-              <p className="mt-3 text-zinc-300">
+              <p className="mt-3 text-[oklch(0.90_0.01_25)] font-medium">
                 chanudiwassala@gmail.com
               </p>
             </div>
@@ -94,13 +94,14 @@ export default function Contact() {
                   key={i}
                   href={item.link}
                   target="_blank"
+                  rel="noopener noreferrer"
                   className="group relative"
                 >
-                  <div className="w-12 h-12 flex items-center justify-center rounded-xl border border-white/10 bg-white/5 backdrop-blur-xl hover:scale-110 transition">
-                    <item.icon className="text-white group-hover:text-blue-400 transition" />
+                  <div className="w-12 h-12 flex items-center justify-center rounded-xl border border-[oklch(0.503_0.172_25/0.3)] bg-[oklch(0.16_0.02_25/0.8)] backdrop-blur-xl hover:scale-110 transition">
+                    <item.icon className="text-white group-hover:text-[oklch(0.503_0.172_25)] transition" />
                   </div>
 
-                  <div className="absolute inset-0 rounded-xl bg-blue-500/20 blur-xl opacity-0 group-hover:opacity-100 transition" />
+                  <div className="absolute inset-0 rounded-xl bg-[oklch(0.503_0.172_25/0.3)] blur-xl opacity-0 group-hover:opacity-100 transition" />
                 </a>
               ))}
             </div>
@@ -113,7 +114,7 @@ export default function Contact() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="p-8 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl space-y-5"
+            className="p-8 rounded-2xl border border-[oklch(0.503_0.172_25/0.25)] bg-[oklch(0.16_0.02_25/0.7)] backdrop-blur-xl space-y-5"
           >
             {/* Name */}
             <input
@@ -123,7 +124,7 @@ export default function Contact() {
               onChange={(e) =>
                 setFormData({ ...formData, name: e.target.value })
               }
-              className="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 text-white outline-none focus:border-blue-500 transition"
+              className="w-full px-4 py-3 rounded-xl bg-[oklch(0.12_0.015_25/0.8)] border border-[oklch(0.503_0.172_25/0.2)] text-white placeholder-[oklch(0.60_0.02_25)] outline-none focus:border-[oklch(0.503_0.172_25)] transition"
             />
 
             {/* Email */}
@@ -134,7 +135,7 @@ export default function Contact() {
               onChange={(e) =>
                 setFormData({ ...formData, email: e.target.value })
               }
-              className="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 text-white outline-none focus:border-purple-500 transition"
+              className="w-full px-4 py-3 rounded-xl bg-[oklch(0.12_0.015_25/0.8)] border border-[oklch(0.503_0.172_25/0.2)] text-white placeholder-[oklch(0.60_0.02_25)] outline-none focus:border-[oklch(0.75_0.18_55)] transition"
             />
 
             {/* Message */}
@@ -145,14 +146,14 @@ export default function Contact() {
               onChange={(e) =>
                 setFormData({ ...formData, message: e.target.value })
               }
-              className="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 text-white outline-none focus:border-pink-500 transition resize-none"
+              className="w-full px-4 py-3 rounded-xl bg-[oklch(0.12_0.015_25/0.8)] border border-[oklch(0.503_0.172_25/0.2)] text-white placeholder-[oklch(0.60_0.02_25)] outline-none focus:border-[oklch(0.65_0.22_350)] transition resize-none"
             />
 
             {/* Button */}
             <button
               type="submit"
               disabled={status === "submitting"}
-              className="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white font-semibold hover:scale-105 transition disabled:opacity-50"
+              className="w-full flex items-center justify-center gap-2 py-3 rounded-xl btn-oklch-primary font-semibold hover:scale-105 transition disabled:opacity-50"
             >
               {status === "submitting" ? (
                 <>
@@ -169,7 +170,7 @@ export default function Contact() {
 
             {/* Success */}
             {status === "success" && (
-              <p className="text-green-400 text-sm text-center">
+              <p className="text-[oklch(0.75_0.18_140)] text-sm text-center font-medium">
                 Message sent successfully 🚀
               </p>
             )}

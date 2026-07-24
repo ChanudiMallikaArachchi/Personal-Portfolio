@@ -7,14 +7,14 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="relative w-full px-6 py-10 bg-black overflow-hidden">
+    <footer className="relative w-full px-6 py-10 bg-[oklch(0.11_0.015_25)] overflow-hidden font-primary">
       
       {/* 🌈 Background Glow */}
-      <div className="absolute -top-20 left-1/2 -translate-x-1/2 w-[400px] h-[400px] bg-blue-500/20 blur-[140px] rounded-full" />
-      <div className="absolute bottom-0 right-10 w-[300px] h-[300px] bg-purple-500/20 blur-[120px] rounded-full" />
+      <div className="absolute -top-20 left-1/2 -translate-x-1/2 w-[400px] h-[400px] bg-[oklch(0.503_0.172_25/0.2)] blur-[140px] rounded-full pointer-events-none" />
+      <div className="absolute bottom-0 right-10 w-[300px] h-[300px] bg-[oklch(0.65_0.22_350/0.15)] blur-[120px] rounded-full pointer-events-none" />
 
-      {/* Top border glow line */}
-      <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-blue-500/50 to-transparent" />
+      {/* Top border glow line with OKLCH gradient */}
+      <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[oklch(0.503_0.172_25/0.6)] to-transparent" />
 
       <div className="relative z-10 mx-auto max-w-6xl">
 
@@ -22,30 +22,30 @@ export default function Footer() {
 
           {/* LEFT */}
           <div className="space-y-2">
-            <h2 className="text-lg font-semibold text-white">
+            <h2 className="font-secondary text-lg font-bold text-white">
               {personalInfo.name}
             </h2>
 
-            <p className="text-zinc-400 text-sm flex items-center gap-1">
-              Built with Next.js + Tailwind
-              <span className="text-pink-400 animate-pulse">💖</span>
+            <p className="text-[oklch(0.82_0.015_25)] text-sm flex items-center justify-center md:justify-start gap-1">
+              Built with Next.js & OKLCH Engine
+              <span className="text-[oklch(0.503_0.172_25)] animate-pulse">💖</span>
             </p>
 
-            <p className="text-xs text-zinc-500">
+            <p className="text-xs text-[oklch(0.60_0.02_25)]">
               © {currentYear} All rights reserved
             </p>
           </div>
 
           {/* CENTER */}
-          <div className="text-xs text-zinc-500">
-            Turning ideas into reality ✨
+          <div className="text-xs text-[oklch(0.60_0.02_25)]">
+            Ensuring software excellence & quality ✨
           </div>
 
           {/* RIGHT SOCIALS */}
           <div className="flex gap-4">
             {[
               { icon: Github, link: socials.github, color: "hover:text-white" },
-              { icon: Linkedin, link: socials.linkedin, color: "hover:text-blue-400" },
+              { icon: Linkedin, link: socials.linkedin, color: "hover:text-[oklch(0.503_0.172_25)]" },
             ].map((item, i) => (
               <a
                 key={i}
@@ -55,11 +55,11 @@ export default function Footer() {
                 className="group relative"
               >
                 {/* Glow background */}
-                <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 opacity-0 blur-xl group-hover:opacity-30 transition" />
+                <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-[oklch(0.75_0.18_55)] via-[oklch(0.503_0.172_25)] to-[oklch(0.65_0.22_350)] opacity-0 blur-xl group-hover:opacity-35 transition" />
 
                 {/* Icon box */}
-                <div className="relative w-10 h-10 flex items-center justify-center rounded-xl border border-white/10 bg-white/5 backdrop-blur-md transition transform group-hover:scale-110">
-                  <item.icon className={`w-4 h-4 text-zinc-300 ${item.color} transition`} />
+                <div className="relative w-10 h-10 flex items-center justify-center rounded-xl border border-[oklch(0.503_0.172_25/0.25)] bg-[oklch(0.16_0.02_25/0.8)] backdrop-blur-md transition transform group-hover:scale-110">
+                  <item.icon className={`w-4 h-4 text-[oklch(0.84_0.015_25)] ${item.color} transition`} />
                 </div>
               </a>
             ))}
