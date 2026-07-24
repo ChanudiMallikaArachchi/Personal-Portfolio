@@ -25,25 +25,25 @@ export default function Skills() {
   return (
     <SectionWrapper
       id="skills"
-      className="relative w-full bg-black px-6 py-28 overflow-hidden"
+      className="relative w-full bg-[oklch(0.11_0.015_25)] px-6 py-28 overflow-hidden font-primary"
     >
-      {/* Background Glow */}
-      <div className="absolute top-20 left-10 h-80 w-80 rounded-full bg-blue-500/20 blur-[140px]" />
-      <div className="absolute bottom-20 right-10 h-80 w-80 rounded-full bg-pink-500/20 blur-[140px]" />
+      {/* Background OKLCH Glows */}
+      <div className="absolute top-20 left-10 h-80 w-80 rounded-full bg-[oklch(0.503_0.172_25/0.2)] blur-[140px]" />
+      <div className="absolute bottom-20 right-10 h-80 w-80 rounded-full bg-[oklch(0.75_0.18_55/0.15)] blur-[140px]" />
 
       <div className="relative z-10 mx-auto max-w-5xl text-center">
 
         {/* Title */}
-        <p className="text-xs uppercase tracking-[0.3em] text-zinc-500">
+        <p className="text-xs uppercase tracking-[0.3em] text-[oklch(0.503_0.172_25)] font-bold">
           My Toolbox
         </p>
 
-        <h2 className="mt-3 text-5xl md:text-6xl font-black text-white">
+        <h2 className="font-secondary mt-3 text-5xl md:text-6xl font-black text-white">
           Skills & Technologies
         </h2>
 
-        <p className="mt-4 text-zinc-400 max-w-2xl mx-auto">
-          Tools and technologies I use to build scalable modern applications.
+        <p className="mt-4 text-[oklch(0.82_0.015_25)] max-w-2xl mx-auto">
+          Tools and technologies I use to build & test scalable modern applications.
         </p>
 
         {/* Skills Grid */}
@@ -54,29 +54,29 @@ export default function Skills() {
               key={skill}
               className="
                 group relative p-[2px] rounded-2xl
-                bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500
+                bg-gradient-to-r from-[oklch(0.75_0.18_55)] via-[oklch(0.503_0.172_25)] to-[oklch(0.65_0.22_350)]
                 hover:scale-105 transition duration-300
                 animate-fadeUp
               "
               style={{
-                animationDelay: `${index * 70}ms`,
+                animationDelay: `${index * 60}ms`,
               }}
             >
               {/* Inner Card */}
               <div className="
-                rounded-2xl bg-black/90
+                rounded-2xl bg-[oklch(0.14_0.02_25)]
                 backdrop-blur-md
                 px-5 py-6 text-center
-                border border-white/10
-                group-hover:border-white/30
+                border border-[oklch(0.503_0.172_25/0.2)]
+                group-hover:border-[oklch(0.503_0.172_25/0.6)]
                 transition
               ">
 
                 {/* Glow dot */}
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-20 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 blur-xl transition" />
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-25 bg-gradient-to-r from-[oklch(0.75_0.18_55)] via-[oklch(0.503_0.172_25)] to-[oklch(0.65_0.22_350)] blur-xl transition" />
 
                 <span className="
-                  relative text-zinc-200 font-medium
+                  relative text-[oklch(0.90_0.01_25)] font-semibold
                   group-hover:text-white
                   transition
                 ">
