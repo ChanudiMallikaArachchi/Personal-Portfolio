@@ -32,10 +32,10 @@ const config: Config = {
         },
 
         accent: {
-          gold: "var(--accent-gold)",
-          rose: "var(--accent-rose)",
-          flame: "var(--accent-flame)",
-          plum: "var(--accent-plum)",
+          lime: "var(--accent-lime)",
+          mint: "var(--accent-mint)",
+          cyan: "var(--accent-cyan)",
+          teal: "var(--accent-teal)",
         },
 
         text: {
@@ -67,8 +67,8 @@ const config: Config = {
 
       boxShadow: {
         subtle: "0 4px 10px rgba(0,0,0,0.15)",
-        card: "0 10px 30px oklch(0.10 0.015 25 / 0.8)",
-        glow: "0 0 25px oklch(0.503 0.172 25 / 0.4)",
+        card: "0 10px 30px oklch(0.10 0.015 145 / 0.8)",
+        glow: "0 0 25px oklch(0.571 0.181 145 / 0.4)",
       },
 
       animation: {
