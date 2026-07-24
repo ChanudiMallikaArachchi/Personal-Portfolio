@@ -24,7 +24,7 @@ export default function Projects() {
           </p>
 
           <h2 className="font-secondary mt-4 text-5xl md:text-6xl font-black text-white">
-            Projects I've Built
+            {"Projects I've Built"}
           </h2>
 
           <p className="mt-5 text-[oklch(0.82_0.015_25)] max-w-2xl mx-auto">
