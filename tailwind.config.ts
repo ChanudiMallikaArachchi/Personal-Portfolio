@@ -12,32 +12,43 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        bg: "#09090b",
-        panel: "#18181b",
-        border: "#27272a",
+        bg: "var(--bg-dark)",
+        panel: "var(--surface-dark)",
+        card: "var(--surface-card)",
+        border: "var(--border-muted)",
+
+        brand: {
+          50: "var(--primary-50)",
+          100: "var(--primary-100)",
+          200: "var(--primary-200)",
+          300: "var(--primary-300)",
+          400: "var(--primary-400)",
+          DEFAULT: "var(--primary-500)",
+          500: "var(--primary-500)",
+          600: "var(--primary-600)",
+          700: "var(--primary-700)",
+          800: "var(--primary-800)",
+          900: "var(--primary-900)",
+        },
 
         accent: {
-          DEFAULT: "#3b82f6",
-          secondary: "#8b5cf6",
-          success: "#22c55e",
-          warning: "#f59e0b",
+          gold: "var(--accent-gold)",
+          rose: "var(--accent-rose)",
+          flame: "var(--accent-flame)",
+          plum: "var(--accent-plum)",
         },
 
         text: {
-          primary: "#fafafa",
-          secondary: "#d4d4d8",
-          muted: "#71717a",
+          primary: "var(--text-heading)",
+          secondary: "var(--text-body)",
+          muted: "var(--text-muted)",
         },
       },
 
-      backgroundImage: {
-        hero: "linear-gradient(to right, #3b82f6, #8b5cf6)",
-        mesh:
-          "radial-gradient(circle at top left, rgba(59,130,246,0.15), transparent 40%), radial-gradient(circle at bottom right, rgba(139,92,246,0.15), transparent 40%)",
-      },
-
       fontFamily: {
-        sans: ["Inter", "system-ui", "sans-serif"],
+        primary: ["var(--font-primary)", "Plus Jakarta Sans", "sans-serif"],
+        secondary: ["var(--font-secondary)", "Google Sans Flex", "sans-serif"],
+        sans: ["var(--font-primary)", "Plus Jakarta Sans", "sans-serif"],
         mono: ["JetBrains Mono", "monospace"],
       },
 
@@ -56,60 +67,25 @@ const config: Config = {
 
       boxShadow: {
         subtle: "0 4px 10px rgba(0,0,0,0.15)",
-        card: "0 10px 30px rgba(0,0,0,0.25)",
-        glow: "0 0 25px rgba(59,130,246,0.35)",
-      },
-
-      backdropBlur: {
-        xs: "2px",
+        card: "0 10px 30px oklch(0.10 0.015 25 / 0.8)",
+        glow: "0 0 25px oklch(0.503 0.172 25 / 0.4)",
       },
 
       animation: {
         "fade-in": "fadeIn 0.8s ease-out forwards",
-        float: "float 4s ease-in-out infinite",
-        pulseGlow: "pulseGlow 2s infinite",
+        float: "float 5s ease-in-out infinite",
+        pulseGlow: "pulseGlow 3s infinite ease-in-out",
         slideUp: "slideUp 0.6s ease-out forwards",
       },
 
       keyframes: {
         fadeIn: {
-          from: {
-            opacity: "0",
-            transform: "translateY(20px)",
-          },
-          to: {
-            opacity: "1",
-            transform: "translateY(0)",
-          },
+          from: { opacity: "0", transform: "translateY(20px)" },
+          to: { opacity: "1", transform: "translateY(0)" },
         },
-
         slideUp: {
-          from: {
-            opacity: "0",
-            transform: "translateY(40px)",
-          },
-          to: {
-            opacity: "1",
-            transform: "translateY(0)",
-          },
-        },
-
-        float: {
-          "0%, 100%": {
-            transform: "translateY(0px)",
-          },
-          "50%": {
-            transform: "translateY(-10px)",
-          },
-        },
-
-        pulseGlow: {
-          "0%, 100%": {
-            boxShadow: "0 0 10px rgba(59,130,246,0.3)",
-          },
-          "50%": {
-            boxShadow: "0 0 30px rgba(59,130,246,0.7)",
-          },
+          from: { opacity: "0", transform: "translateY(40px)" },
+          to: { opacity: "1", transform: "translateY(0)" },
         },
       },
     },
