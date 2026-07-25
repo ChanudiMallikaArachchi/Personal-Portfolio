@@ -45,9 +45,8 @@ export default function Home() {
           Ensuring the quality & performance of scalable applications using{" "}
           <span className="text-[oklch(0.84_0.08_65)] font-semibold">Java</span>,{" "}
           <span className="text-[oklch(0.77_0.07_10)] font-semibold">Selenium</span>,{" "}
-          <span className="text-[oklch(0.80_0.10_35)] font-semibold">Playwright</span>,{" "}
           <span className="text-[oklch(0.72_0.12_350)] font-semibold">Postman</span>, and{" "}
-          <span className="text-[oklch(0.84_0.08_65)] font-semibold">Jenkins</span>.
+          <span className="text-[oklch(0.80_0.10_35)] font-semibold">Playwright</span>,{" "}
         </p>
 
         {/* Buttons */}
