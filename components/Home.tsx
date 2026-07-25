@@ -19,14 +19,14 @@ export default function Home() {
       className="relative min-h-screen flex items-center justify-center overflow-hidden px-6 pt-24 font-primary"
     >
       {/* OKLCH Ambient Hero Glow */}
-      <div className="absolute top-20 left-1/2 -translate-x-1/2 h-96 w-96 rounded-full bg-[oklch(0.571_0.181_145/0.25)] blur-[130px]" />
-      <div className="absolute bottom-10 left-1/4 h-80 w-80 rounded-full bg-[oklch(0.72_0.17_190/0.18)] blur-[140px]" />
+      <div className="absolute top-20 left-1/2 -translate-x-1/2 h-96 w-96 rounded-full bg-[oklch(0.77_0.07_10/0.25)] blur-[130px]" />
+      <div className="absolute bottom-10 left-1/4 h-80 w-80 rounded-full bg-[oklch(0.84_0.08_65/0.18)] blur-[140px]" />
 
       <div className="relative z-10 max-w-5xl mx-auto text-center">
 
         {/* Welcome Badge */}
-        <div className="inline-flex items-center rounded-full border border-[oklch(0.571_0.181_145/0.4)] bg-[oklch(0.571_0.181_145/0.12)] px-5 py-2 backdrop-blur-md shadow-[0_0_20px_oklch(0.571_0.181_145/0.2)]">
-          <span className="text-sm font-semibold text-[oklch(0.85_0.14_145)]">
+        <div className="inline-flex items-center rounded-full border border-[oklch(0.77_0.07_10/0.4)] bg-[oklch(0.77_0.07_10/0.12)] px-5 py-2 backdrop-blur-md shadow-[0_0_20px_oklch(0.77_0.07_10/0.2)]">
+          <span className="text-sm font-semibold text-[oklch(0.90_0.04_10)]">
             🚀 Welcome to My Portfolio
           </span>
         </div>
@@ -35,19 +35,19 @@ export default function Home() {
         <h1 className="font-secondary mt-8 text-5xl md:text-7xl lg:text-8xl font-black leading-tight tracking-tight">
           <span className="text-white">Chanudi</span>
           <br />
-          <span className="bg-gradient-to-r from-[oklch(0.76_0.19_125)] via-[oklch(0.571_0.181_145)] to-[oklch(0.72_0.17_190)] bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-[oklch(0.84_0.08_65)] via-[oklch(0.77_0.07_10)] to-[oklch(0.72_0.12_350)] bg-clip-text text-transparent">
             MallikaArachchi
           </span>
         </h1>
 
         {/* Description */}
-        <p className="mx-auto mt-6 max-w-3xl text-lg md:text-xl text-[oklch(0.82_0.015_145)] leading-relaxed">
+        <p className="mx-auto mt-6 max-w-3xl text-lg md:text-xl text-[oklch(0.84_0.015_10)] leading-relaxed">
           Ensuring the quality & performance of scalable applications using{" "}
-          <span className="text-[oklch(0.76_0.19_125)] font-semibold">Java</span>,{" "}
-          <span className="text-[oklch(0.68_0.19_160)] font-semibold">Selenium</span>,{" "}
-          <span className="text-[oklch(0.72_0.17_190)] font-semibold">Playwright</span>,{" "}
-          <span className="text-[oklch(0.571_0.181_145)] font-semibold">Postman</span>, and{" "}
-          <span className="text-[oklch(0.76_0.19_125)] font-semibold">Jenkins</span>.
+          <span className="text-[oklch(0.84_0.08_65)] font-semibold">Java</span>,{" "}
+          <span className="text-[oklch(0.77_0.07_10)] font-semibold">Selenium</span>,{" "}
+          <span className="text-[oklch(0.80_0.10_35)] font-semibold">Playwright</span>,{" "}
+          <span className="text-[oklch(0.72_0.12_350)] font-semibold">Postman</span>, and{" "}
+          <span className="text-[oklch(0.84_0.08_65)] font-semibold">Jenkins</span>.
         </p>
 
         {/* Buttons */}
@@ -79,7 +79,7 @@ export default function Home() {
         <div className="mt-16 flex justify-center">
           <ChevronDown
             size={32}
-            className="animate-bounce text-[oklch(0.571_0.181_145)] opacity-80"
+            className="animate-bounce text-[oklch(0.77_0.07_10)] opacity-80"
           />
         </div>
 
