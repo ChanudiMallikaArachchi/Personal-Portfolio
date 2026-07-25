@@ -28,7 +28,7 @@ export default function Navbar() {
   return (
     <header className="fixed top-0 left-0 z-50 w-full font-primary">
       <div className="mx-auto max-w-7xl px-6 py-4">
-        <div className="flex items-center justify-between rounded-2xl border border-[oklch(0.571_0.181_145/0.3)] bg-[oklch(0.14_0.02_145/0.75)] backdrop-blur-xl px-6 py-4 shadow-[0_0_30px_oklch(0.571_0.181_145/0.2)]">
+        <div className="flex items-center justify-between rounded-2xl border border-[oklch(0.77_0.07_10/0.3)] bg-[oklch(0.14_0.02_10/0.75)] backdrop-blur-xl px-6 py-4 shadow-[0_0_30px_oklch(0.77_0.07_10/0.2)]">
           {/* Logo */}
           <h1 className="font-secondary text-xl md:text-2xl font-bold oklch-gradient-text tracking-tight cursor-pointer" onClick={() => handleScrollTo("#home")}>
             Chanudi MallikaArachchi
@@ -40,13 +40,13 @@ export default function Navbar() {
               <button
                 key={link.label}
                 onClick={() => handleScrollTo(link.href)}
-                className="group relative text-[oklch(0.84_0.015_145)] font-medium transition"
+                className="group relative text-[oklch(0.84_0.015_10)] font-medium transition"
               >
                 <span className="group-hover:text-white transition">
                   {link.label}
                 </span>
 
-                <span className="absolute -bottom-2 left-0 h-[2px] w-0 bg-gradient-to-r from-[oklch(0.76_0.19_125)] via-[oklch(0.571_0.181_145)] to-[oklch(0.72_0.17_190)] transition-all duration-300 group-hover:w-full"></span>
+                <span className="absolute -bottom-2 left-0 h-[2px] w-0 bg-gradient-to-r from-[oklch(0.84_0.08_65)] via-[oklch(0.77_0.07_10)] to-[oklch(0.72_0.12_350)] transition-all duration-300 group-hover:w-full"></span>
               </button>
             ))}
           </nav>
@@ -54,7 +54,7 @@ export default function Navbar() {
           {/* Mobile Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-white hover:text-[oklch(0.571_0.181_145)] transition"
+            className="md:hidden text-white hover:text-[oklch(0.77_0.07_10)] transition"
           >
             {isOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
@@ -66,12 +66,12 @@ export default function Navbar() {
             isOpen ? "max-h-96 mt-3" : "max-h-0"
           }`}
         >
-          <div className="rounded-2xl border border-[oklch(0.571_0.181_145/0.3)] bg-[oklch(0.16_0.02_145/0.9)] backdrop-blur-xl p-4">
+          <div className="rounded-2xl border border-[oklch(0.77_0.07_10/0.3)] bg-[oklch(0.16_0.02_10/0.9)] backdrop-blur-xl p-4">
             {navLinks.map((link) => (
               <button
                 key={link.label}
                 onClick={() => handleScrollTo(link.href)}
-                className="block w-full py-3 text-center text-[oklch(0.84_0.015_145)] hover:text-white hover:bg-[oklch(0.571_0.181_145/0.15)] rounded-xl transition"
+                className="block w-full py-3 text-center text-[oklch(0.84_0.015_10)] hover:text-white hover:bg-[oklch(0.77_0.07_10/0.15)] rounded-xl transition"
               >
                 {link.label}
               </button>
