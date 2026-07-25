@@ -15,8 +15,8 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Chanudi MallikaArachchi | Full-Stack Developer Portfolio",
-  description: "Explore the portfolio of Alex Morgan, a Full-Stack Developer specialized in Next.js, React, Node.js, and cloud systems.",
+  title: "Chanudi MallikaArachchi | Quality Assurance Engineer Portfolio",
+  description: "Explore the portfolio of Chanudi MallikaArachchi, a Quality Assurance Engineer specialized in manual testing, test automation, bug tracking, and web application quality.",
 };
 
 export default function RootLayout({

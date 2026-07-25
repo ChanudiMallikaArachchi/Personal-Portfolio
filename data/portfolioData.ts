@@ -22,7 +22,7 @@ export interface StatItem {
 
 export const personalInfo = {
   name: "Chanudi MallikaArachchi",
-  role: "Full-Stack Developer",
+  role: "Quality Assurance Engineer Portfolio",
   tagline: "I build robust, scalable web applications and high-fidelity user experiences.",
   bio: "I am a software engineer focused on crafting clean, high-performance web applications. With expertise in React, Next.js, Node.js, and cloud infrastructure, I specialize in taking products from concept to production. I design systems that are fast, accessible, and built with maintainability in mind.",
 };
