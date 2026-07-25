@@ -23,7 +23,7 @@ const config: Config = {
           200: "var(--primary-200)",
           300: "var(--primary-300)",
           400: "var(--primary-400)",
-          DEFAULT: "var(--primary-500)",
+          DEFAULT: "var(--primary-400)",
           500: "var(--primary-500)",
           600: "var(--primary-600)",
           700: "var(--primary-700)",
@@ -32,10 +32,10 @@ const config: Config = {
         },
 
         accent: {
-          lime: "var(--accent-lime)",
-          mint: "var(--accent-mint)",
-          cyan: "var(--accent-cyan)",
-          teal: "var(--accent-teal)",
+          peach: "var(--accent-peach)",
+          champagne: "var(--accent-champagne)",
+          rose: "var(--accent-rose)",
+          bronze: "var(--accent-bronze)",
         },
 
         text: {
@@ -67,8 +67,8 @@ const config: Config = {
 
       boxShadow: {
         subtle: "0 4px 10px rgba(0,0,0,0.15)",
-        card: "0 10px 30px oklch(0.10 0.015 145 / 0.8)",
-        glow: "0 0 25px oklch(0.571 0.181 145 / 0.4)",
+        card: "0 10px 30px oklch(0.10 0.015 10 / 0.8)",
+        glow: "0 0 25px oklch(0.77 0.07 10 / 0.4)",
       },
 
       animation: {
