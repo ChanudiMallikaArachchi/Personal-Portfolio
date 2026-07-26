@@ -65,7 +65,7 @@ export default function About() {
           </p>
 
           <p className="mt-4 text-lg text-[oklch(0.84_0.015_10)] leading-relaxed hover:text-white transition">
-            My focus areas include test automation, manual testing, and utilizing tools like Selenium, Cypress, Appium, and Postman. I enjoy finding edge cases and delivering flawless user experiences.
+            My focus areas include test automation, manual testing, and utilizing tools like Selenium, Playwright and Postman. I enjoy finding edge cases and delivering flawless user experiences.
           </p>
 
           {/* Highlight Quote */}

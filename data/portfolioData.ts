@@ -30,27 +30,44 @@ export const personalInfo = {
 export const projects: Project[] = [
   {
     id: "1",
-    title: "Service Booking Site (ServiGo)",
-    description: "A full-stack service booking platform where users can browse services, schedule appointments, and manage bookings efficiently. Built with a clean UI and secure backend APIs.",
-    tech: ["React", "Spring Boot", "Java", "MySQL", "REST API", "Tailwind CSS"],
-    github: "https://github.com/ChanudiMallikaArachchi/ServiGo-Frontend.git",
-    image: "/project1.png",  
-  },
-  {
-    id: "2",
-    title: "Vehicle Rent App (RentRide)",
-    description: "A mobile application for renting vehicles easily. Users can browse available vehicles, make bookings, and manage rental history with a smooth user experience.",
-    tech: ["Flutter", "Dart", "Firebase"],
-    github: "https://github.com/ChanudiMallikaArachchi/RentRide.git",
-  },
-  {
-    id: "3",
     title: "Personal Portfolio",
     description: "A modern personal portfolio website to showcase my projects, skills, and experience. Designed with responsive UI and smooth animations.",
     tech: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
     github: "https://github.com/ChanudiMallikaArachchi/Personal-Portfolio.git",
-    image: "/project3.png",
+    image: "/portfolio.png",
   },
+  {
+    id: "2",
+    title: "OpenCart Automation Testing ",
+    description: "Engineered an end-to-end (E2E) test automation framework using Playwright and JavaScript for an OpenCart ecommerce platform, following the Page Object Model (POM) architecture. ",
+    tech: ["Playwright", "JavaScript", "Tailwind CSS"],
+    github: "https://github.com/ChanudiMallikaArachchi/Automation_testing_OpenCart.git",
+    image: "/.png",  
+  },
+  {
+    id: "3",
+    title: "OrangeHRM Automation Testing",
+    description: "Developed a robust, scalable end-to-end test automation framework using Playwright and JavaScript to automate core HR workflows on the OrangeHRM enterprise platform. ",
+    tech: ["Playwright", "JavaScript"],
+    github: "https://github.com/ChanudiMallikaArachchi/Automation_testing_OrangeHRM.git",
+    image: "/orangeHRM.png",
+  },
+  {
+    id: "4",
+    title: "SauceDemo Automation Testing",
+    description: "Developed an automated UI testing project for the SauceDemo e-commerce application using Java, Selenium WebDriver, TestNG, and Maven.",
+    tech: ["Selenium WebDriver", "TestNG", "Maven"],
+    github: "https://github.com/ChanudiMallikaArachchi/saucedemo-automation-java.git",
+    image: "/sauceDemo.png",
+  },
+  {
+    id: "5",
+    title: "Automation Testing — Product Store ",
+    description: "Developed an end-to-end UI automation test framework using Playwright (JavaScript) and the Page Object Model (POM). ",
+    tech: ["Playwright", "JavaScript", "CSS3"],
+    github: "https://github.com/ChanudiMallikaArachchi/Automation_testing_productStore.git",
+    image: "/productStore.png",
+  }
 ];
 
 export const skills: SkillCategory[] = [

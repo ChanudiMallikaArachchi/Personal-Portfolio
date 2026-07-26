@@ -65,7 +65,7 @@ export default function Home() {
           </button>
 
           <a
-            href="/Chanudi mallikaArachchi(CV).pdf"
+            href="/Chanudi_MallikaArachchi.pdf"
             download
             className="inline-flex items-center justify-center gap-2 rounded-2xl btn-oklch-secondary px-8 py-4 font-semibold hover:scale-105 transition duration-300"
           >
