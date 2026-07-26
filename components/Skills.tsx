@@ -7,7 +7,6 @@ const skills = [
   "Selenium",
   "Playwright",
   "Postman",
-  "Jenkins",
   "Spring Boot",
   "React",
   "Next.js",
