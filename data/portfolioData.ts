@@ -42,7 +42,7 @@ export const projects: Project[] = [
     description: "Engineered an end-to-end (E2E) test automation framework using Playwright and JavaScript for an OpenCart ecommerce platform, following the Page Object Model (POM) architecture. ",
     tech: ["Playwright", "JavaScript", "Tailwind CSS"],
     github: "https://github.com/ChanudiMallikaArachchi/Automation_testing_OpenCart.git",
-    image: "/.png",  
+    image: "/openCart.png",  
   },
   {
     id: "3",
