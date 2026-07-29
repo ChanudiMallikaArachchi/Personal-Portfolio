@@ -1,11 +1,28 @@
 "use client";
 
+import Image from "next/image";
+import { SparklesCore } from "@/components/ui/sparkles";
+import { TextAnimate } from "@/registry/magicui/text-animate";
+
 export default function About() {
   return (
     <section
       id="about"
       className="relative min-h-screen flex items-center overflow-hidden px-6 py-24 font-primary"
     >
+      {/* Sparkles Background Effect */}
+      <div className="absolute inset-0 w-full h-full pointer-events-none z-0">
+        <SparklesCore
+          id="tsparticles-about"
+          background="transparent"
+          minSize={0.6}
+          maxSize={1.6}
+          particleDensity={80}
+          className="w-full h-full"
+          particleColor="#ffffff"
+        />
+      </div>
+
       {/* OKLCH Ambient Background Glows */}
       <div className="absolute top-20 left-10 h-72 w-72 rounded-full bg-[oklch(0.77_0.07_10/0.2)] blur-[120px]" />
       <div className="absolute bottom-20 right-10 h-72 w-72 rounded-full bg-[oklch(0.84_0.08_65/0.18)] blur-[120px]" />
@@ -25,9 +42,12 @@ export default function About() {
             <div className="absolute -inset-2 rounded-full bg-gradient-to-r from-[oklch(0.84_0.08_65)] via-[oklch(0.77_0.07_10)] to-[oklch(0.72_0.12_350)] blur-xl opacity-60 group-hover:opacity-95 transition duration-500" />
 
             {/* Profile Image */}
-            <img
+            <Image
               src="/profile.png"
               alt="Chanudi MallikaArachchi Profile"
+              width={420}
+              height={420}
+              priority
               className="
                 relative
                 w-[320px] h-[320px]
@@ -55,18 +75,16 @@ export default function About() {
             Who I Am
           </h2>
 
-          <p className="mt-8 text-lg text-[oklch(0.84_0.015_10)] leading-relaxed hover:text-white transition">
-            I am a third-year BSc (Hons) Computer Science undergraduate at
-            NSBM Green University.
-          </p>
-
-          <p className="mt-4 text-lg text-[oklch(0.84_0.015_10)] leading-relaxed hover:text-white transition">
-            I am passionate about software quality assurance and love ensuring the reliability and performance of modern web and mobile applications.
-          </p>
-
-          <p className="mt-4 text-lg text-[oklch(0.84_0.015_10)] leading-relaxed hover:text-white transition">
-            My focus areas include test automation, manual testing, and utilizing tools like Selenium, Playwright and Postman. I enjoy finding edge cases and delivering flawless user experiences.
-          </p>
+          <TextAnimate
+            animation="fadeIn"
+            by="line"
+            as="p"
+            duration={0.5}
+            delay={0.2}
+            className="mt-8 text-lg text-[oklch(0.84_0.015_10)] leading-relaxed"
+          >
+            {`I am a third-year BSc (Hons) Computer Science undergraduate at NSBM Green University.\n\nI am passionate about software quality assurance and love ensuring the reliability and performance of modern web and mobile applications.\n\nMy focus areas include test automation, manual testing, and utilizing tools like Selenium, Playwright and Postman.\n\nI enjoy finding edge cases and delivering flawless user experiences.`}
+          </TextAnimate>
 
           {/* Highlight Quote */}
           <div className="mt-10 border-l-4 border-[oklch(0.77_0.07_10)] pl-5 text-[oklch(0.92_0.02_10)] italic bg-[oklch(0.77_0.07_10/0.06)] py-3 pr-4 rounded-r-xl">

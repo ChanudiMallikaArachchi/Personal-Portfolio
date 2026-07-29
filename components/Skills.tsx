@@ -14,7 +14,7 @@ const skills = [
   "Flutter",
   "TypeScript",
   "Tailwind CSS",
-  "Git",
+  "Git & GitHub",
   "REST APIs",
   "Node.js",
   "Firebase",

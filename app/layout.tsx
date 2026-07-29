@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, JetBrains_Mono } from "next/font/google";
+import { Inter, Open_Sans } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
@@ -8,9 +8,9 @@ const inter = Inter({
   display: "swap",
 });
 
-const jetbrainsMono = JetBrains_Mono({
+const openSans = Open_Sans({
   subsets: ["latin"],
-  variable: "--font-mono",
+  variable: "--font-open-sans",
   display: "swap",
 });
 
@@ -27,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body
-        className={`${inter.variable} ${jetbrainsMono.variable} font-primary bg-background text-textPrimary antialiased`}
+        className={`${inter.variable} ${openSans.variable} font-primary bg-background text-textPrimary antialiased`}
       >
         {children}
       </body>
