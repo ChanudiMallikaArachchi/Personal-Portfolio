@@ -6,6 +6,8 @@ const skills = [
   "Java",
   "Selenium",
   "Playwright",
+  "TestNG",
+  "Maven",
   "Postman",
   "Spring Boot",
   "React",
