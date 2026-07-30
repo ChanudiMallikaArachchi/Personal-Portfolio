@@ -1,10 +1,24 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { ArrowRight, Download, ChevronDown } from "lucide-react";
 import { TextAnimate } from "@/registry/magicui/text-animate";
 import { RetroGrid } from "@/registry/magicui/retro-grid";
 
 export default function Home() {
+  const [greeting, setGreeting] = useState("✨ Welcome to My Personal Portfolio");
+
+  useEffect(() => {
+    const hour = new Date().getHours();
+    if (hour >= 5 && hour < 12) {
+      setGreeting("☀️ Good Morning! Welcome to My Personal Portfolio");
+    } else if (hour >= 12 && hour < 17) {
+      setGreeting("☀️ Good Afternoon! Welcome to My Personal Portfolio");
+    } else {
+      setGreeting("🌙 Good Evening! Welcome to My Personal Portfolio");
+    }
+  }, []);
+
   const handleScrollTo = (id: string) => {
     const element = document.querySelector(id);
 
@@ -20,29 +34,26 @@ export default function Home() {
       id="home"
       className="relative min-h-screen flex items-center justify-center overflow-hidden px-6 pt-24 font-primary"
     >
-      {/* 3D Perspective Retro Grid */}
       <RetroGrid />
 
-      {/* OKLCH Ambient Hero Glow */}
       <div className="absolute top-20 left-1/2 -translate-x-1/2 h-96 w-96 rounded-full bg-[oklch(0.77_0.07_10/0.25)] blur-[130px]" />
       <div className="absolute bottom-10 left-1/4 h-80 w-80 rounded-full bg-[oklch(0.84_0.08_65/0.18)] blur-[140px]" />
 
       <div className="relative z-10 max-w-5xl mx-auto text-center">
 
-        {/* Welcome Badge */}
-        <div className="inline-flex items-center rounded-full border border-[oklch(0.77_0.07_10/0.4)] bg-[oklch(0.77_0.07_10/0.12)] px-5 py-2 backdrop-blur-md shadow-[0_0_20px_oklch(0.77_0.07_10/0.2)]">
+        <div className="mb-4">
           <TextAnimate
-            animation="blurInUp"
+            key={greeting}
+            animation="scaleUp"
             by="character"
-            duration={0.8}
-            as="span"
-            className="text-sm font-semibold text-[oklch(0.90_0.04_10)]"
+            duration={0.6}
+            as="p"
+            className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold tracking-normal text-[oklch(0.86_0.10_65)] drop-shadow-[0_0_15px_oklch(0.86_0.10_65/0.25)]"
           >
-            🚀 Welcome to My Portfolio
+            {greeting}
           </TextAnimate>
         </div>
 
-        {/* Name with Google Sans Flex font */}
         <h1 className="font-secondary mt-8 text-5xl md:text-7xl lg:text-8xl font-black leading-tight tracking-tight">
           <TextAnimate
             animation="blurInUp"
@@ -65,7 +76,6 @@ export default function Home() {
           </TextAnimate>
         </h1>
 
-        {/* Description */}
         <p className="mx-auto mt-6 max-w-3xl text-lg md:text-xl text-[oklch(0.84_0.015_10)] leading-relaxed">
           Ensuring the quality & performance of scalable applications using{" "}
           <span className="text-[oklch(0.84_0.08_65)] font-semibold">Java</span>,{" "}
@@ -74,7 +84,6 @@ export default function Home() {
           <span className="text-[oklch(0.80_0.10_35)] font-semibold">Playwright</span>.
         </p>
 
-        {/* Buttons */}
         <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
 
           <button
@@ -89,7 +98,7 @@ export default function Home() {
           </button>
 
           <a
-            href="/Chanudi_MallikaArachchi.pdf"
+            href="/Chanudi MallikaArachchi.pdf"
             download
             className="inline-flex items-center justify-center gap-2 rounded-2xl btn-oklch-secondary px-8 py-4 font-semibold hover:scale-105 transition duration-300"
           >
@@ -99,7 +108,6 @@ export default function Home() {
 
         </div>
 
-        {/* Scroll Indicator */}
         <div className="mt-16 flex justify-center">
           <ChevronDown
             size={32}
