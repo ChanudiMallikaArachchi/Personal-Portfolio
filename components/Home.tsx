@@ -58,7 +58,8 @@ export default function Home() {
           <TextAnimate
             animation="blurInUp"
             by="character"
-            duration={1.2}
+            duration={1.0}
+            delay={1.2}
             as="span"
             className="text-white block"
           >
@@ -67,8 +68,8 @@ export default function Home() {
           <TextAnimate
             animation="blurInUp"
             by="character"
-            duration={1.5}
-            delay={0.2}
+            duration={1.2}
+            delay={1.6}
             as="span"
             className="bg-gradient-to-r from-[oklch(0.84_0.08_65)] via-[oklch(0.77_0.07_10)] to-[oklch(0.72_0.12_350)] bg-clip-text text-transparent block"
           >
