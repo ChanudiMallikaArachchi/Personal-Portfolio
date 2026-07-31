@@ -6,16 +6,20 @@ import { TextAnimate } from "@/registry/magicui/text-animate";
 import { RetroGrid } from "@/registry/magicui/retro-grid";
 
 export default function Home() {
-  const [greeting, setGreeting] = useState("✨ Welcome to My Personal Portfolio");
+  const [greetingTime, setGreetingTime] = useState("Good Evening!");
+  const [timeIcon, setTimeIcon] = useState<"morning" | "afternoon" | "evening" | "default">("evening");
 
   useEffect(() => {
     const hour = new Date().getHours();
     if (hour >= 5 && hour < 12) {
-      setGreeting("☀️ Good Morning! Welcome to My Personal Portfolio");
+      setGreetingTime("Good Morning!");
+      setTimeIcon("morning");
     } else if (hour >= 12 && hour < 17) {
-      setGreeting("☀️ Good Afternoon! Welcome to My Personal Portfolio");
+      setGreetingTime("Good Afternoon!");
+      setTimeIcon("afternoon");
     } else {
-      setGreeting("🌙 Good Evening! Welcome to My Personal Portfolio");
+      setGreetingTime("Good Evening!");
+      setTimeIcon("evening");
     }
   }, []);
 
@@ -41,17 +45,27 @@ export default function Home() {
 
       <div className="relative z-10 max-w-5xl mx-auto text-center">
 
-        <div className="mb-4">
-          <TextAnimate
-            key={greeting}
-            animation="scaleUp"
-            by="character"
-            duration={0.6}
-            as="p"
-            className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold tracking-normal text-[oklch(0.86_0.10_65)] drop-shadow-[0_0_15px_oklch(0.86_0.10_65/0.25)]"
-          >
-            {greeting}
-          </TextAnimate>
+        {/* Highlighted Hero Greeting Pill Badge */}
+        <div className="mb-6 flex justify-center">
+          <div className="group relative inline-flex items-center gap-2.5 sm:gap-3 px-4 sm:px-6 py-2 sm:py-2.5 rounded-full bg-[oklch(0.18_0.02_10/0.8)] backdrop-blur-xl border border-[oklch(0.77_0.07_10/0.4)] shadow-[0_0_25px_oklch(0.77_0.07_10/0.2)] hover:border-[oklch(0.77_0.07_10/0.75)] hover:shadow-[0_0_35px_oklch(0.77_0.07_10/0.35)] transition-all duration-300">
+            
+            {/* Ambient Background Glow */}
+            <span className="absolute inset-0 rounded-full bg-gradient-to-r from-[oklch(0.84_0.08_65/0.25)] via-[oklch(0.77_0.07_10/0.25)] to-[oklch(0.72_0.12_350/0.25)] blur-md -z-10 group-hover:opacity-100 transition-opacity opacity-70" />
+
+            {/* Time Emoji / Highlight Badge */}
+            <span className="inline-flex items-center justify-center px-3 py-1 rounded-full bg-gradient-to-r from-[oklch(0.84_0.08_65/0.2)] to-[oklch(0.77_0.07_10/0.2)] border border-[oklch(0.84_0.08_65/0.4)] shadow-[0_0_12px_oklch(0.84_0.08_65/0.25)] text-base sm:text-lg md:text-xl font-extrabold text-[oklch(0.86_0.10_65)] drop-shadow-[0_0_8px_oklch(0.86_0.10_65/0.5)]">
+              {timeIcon === "morning" && "☀️ "}
+              {timeIcon === "afternoon" && "☀️ "}
+              {timeIcon === "evening" && "🌙 "}
+              <span className="bg-gradient-to-r from-[oklch(0.86_0.10_65)] via-[oklch(0.80_0.10_35)] to-[oklch(0.77_0.07_10)] bg-clip-text text-transparent">
+                {greetingTime}
+              </span>
+            </span>
+
+            <span className="text-[oklch(0.84_0.015_10)] font-medium text-xs sm:text-sm md:text-base tracking-wide">
+              Welcome to My Personal Portfolio
+            </span>
+          </div>
         </div>
 
         <h1 className="font-secondary mt-8 text-5xl md:text-7xl lg:text-8xl font-black leading-tight tracking-tight">

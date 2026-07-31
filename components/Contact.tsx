@@ -17,18 +17,39 @@ export default function Contact() {
     "idle" | "submitting" | "success" | "error"
   >("idle");
 
+  const [errorMessage, setErrorMessage] = useState("");
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.name || !formData.email || !formData.message) return;
 
     setStatus("submitting");
+    setErrorMessage("");
 
-    setTimeout(() => {
-      setStatus("success");
-      setFormData({ name: "", email: "", message: "" });
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
 
-      setTimeout(() => setStatus("idle"), 3000);
-    }, 1200);
+      const result = await response.json();
+
+      if (response.ok && result.success) {
+        setStatus("success");
+        setFormData({ name: "", email: "", message: "" });
+        setTimeout(() => setStatus("idle"), 4000);
+      } else {
+        setStatus("error");
+        setErrorMessage(result.error || "Failed to send message.");
+      }
+    } catch (err) {
+      console.error(err);
+      setStatus("error");
+      setErrorMessage("Something went wrong. Please try again.");
+    }
   };
 
   return (
@@ -73,16 +94,19 @@ export default function Contact() {
             viewport={{ once: true }}
             className="space-y-6"
           >
-            <div className="p-6 rounded-2xl border border-[oklch(0.77_0.07_10/0.25)] bg-[oklch(0.18_0.02_10/0.7)] backdrop-blur-xl">
+            <a
+              href="mailto:chanudiwassala@gmail.com"
+              className="block p-6 rounded-2xl border border-[oklch(0.77_0.07_10/0.25)] bg-[oklch(0.18_0.02_10/0.7)] backdrop-blur-xl hover:border-[oklch(0.77_0.07_10/0.6)] hover:scale-[1.02] transition duration-300"
+            >
               <div className="flex items-center gap-3 text-[oklch(0.77_0.07_10)] font-medium">
                 <Mail />
-                <span className="text-sm">Email Me</span>
+                <span className="text-sm">Email Me Directly</span>
               </div>
 
-              <p className="mt-3 text-[oklch(0.92_0.01_10)] font-medium">
+              <p className="mt-3 text-[oklch(0.92_0.01_10)] font-medium underline underline-offset-4 decoration-[oklch(0.77_0.07_10/0.4)] hover:decoration-[oklch(0.77_0.07_10)] transition">
                 chanudiwassala@gmail.com
               </p>
-            </div>
+            </a>
 
             {/* Socials */}
             <div className="flex gap-4">
@@ -172,6 +196,13 @@ export default function Contact() {
             {status === "success" && (
               <p className="text-[oklch(0.84_0.08_65)] text-sm text-center font-medium">
                 Message sent successfully 🚀
+              </p>
+            )}
+
+            {/* Error */}
+            {status === "error" && (
+              <p className="text-[oklch(0.72_0.12_350)] text-sm text-center font-medium">
+                {errorMessage}
               </p>
             )}
           </motion.form>
